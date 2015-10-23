@@ -1,0 +1,54 @@
+<section class="content" style="margin-bottom: -20px;" ng-cloak>
+    <!-- Main row -->
+    <div class="row">
+        <!-- Left col -->
+    	<div class="col-md-12">
+            <div class="box">
+                <div class="box-header with-border">
+                	<h3 class="box-title">Подразделение</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body">
+					<div align="right">
+							 <input type="text" size="40" placeholder="Подразделение" ng-model="new_subvision.name" style="margin: 0px 40px 0px 0px;">							 				
+							<button class="btn btn-success" ng-click="addSubvision(new_subvision)">Добавить</button>				
+					 </div>
+					<br>
+					<div id="example11_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer">
+	                  		
+	                  		<div class="row">
+	                  			<div class="col-sm-12">
+	                  				<table id="example11" class="table table-bordered table-striped dataTable no-footer" role="grid" aria-describedby="example11_info">
+	                    				<thead>
+	                      					<tr role="row">
+	                      						<th class="sorting" tabindex="0" aria-controls="example11" rowspan="1" colspan="1" aria-label="Название: активировать для сортировки столбца по возрастанию" style="width: 218.889px;">
+	                      							<center>Подразделение</center>
+	                      						</th>	                      						
+	                      						<th style="width: 186px;" class="sorting" tabindex="0" aria-controls="example11" rowspan="1" colspan="1" aria-label="Действие: активировать для сортировки столбца по возрастанию">
+	                      							<center>Действие</center>
+	                      						</th>                   						
+	                      					</tr>
+	                    				</thead>
+	                    				<tbody>
+	                    					<tr role="row" class="odd" ng-repeat="subvision in subvisions">
+	                        					<td>
+	                        						<center ng-bind="subvision.name"></center>
+	                        					</td>           					
+	                        					<td style="width: 10%;">
+	                        						<center>									
+															<button style="width:100%;margin-top:2px;" class="btn btn-danger" ng-click="deleteSubvision(subvision._id)">Удалить</button>				
+										     		</center>
+										     	</td>
+	                      					</tr>
+	                      				</tbody>
+	                  				</table>
+	                  			</div>
+	                  		</div>
+	                  		<!-- <div class="row">
+	                  			<center><button ng-click="loadPosts()" class="btn">Показать еще...</button></center>
+	                  		</div> -->
+                  	</div>
+	            </div><!-- /.box-body -->
+            </div><!-- /.box -->
+        </div><!-- /.col -->
+    </div><!-- /.row (main row) -->
+</section>

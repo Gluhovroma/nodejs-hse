@@ -1,0 +1,77 @@
+<section class="content" style="margin-bottom: -20px;" ng-cloak>
+    <!-- Main row -->
+    <div class="row">
+        <!-- Left col -->
+    	<div class="col-md-12">
+            <div class="box">                
+                <div class="box-body">					
+					<form name="postForm" class="ng-cloak">
+        				<div class="row">
+        				<div class="col-md-12">
+				            <div class="col-md-3">
+				                <fieldset>
+				                    <legend>Рассписание</legend>
+				                    <div class="control-group">
+				                        <label class="control-label" for="title">Дата</label>
+				                        <div class="controls">
+				                        	<input type="date" data-ng-model="timetable.date" class="span10" style="width: 230px;" >
+				                            				                     
+				                        </div>
+				                    </div>
+				                    			                    
+				                    				                    				                    			                    	                   
+				                </fieldset>
+				            </div>
+				            <div class="col-md-9">
+				            	<div class="col-md-6">
+				            		<fieldset>			     
+				                    <div class="control-group">
+				                        <label class="control-label" for="suffix">Утро</label>
+				                        <div text-angular ng-model="timetable.morning" name="demo-editor" ta-text-editor-class="border-around" ta-html-editor-class="border-around"></div>
+				                    </div>		                   
+				                </fieldset>
+				            	</div>
+				            	<div class="col-md-6">
+				            		<fieldset>			     
+				                    <div class="control-group">
+				                        <label class="control-label" for="suffix">День</label>
+				                        <div text-angular ng-model="timetable.afternoon" name="demo-editor1" ta-text-editor-class="border-around" ta-html-editor-class="border-around"></div>
+				                    </div>		                   
+				                </fieldset>
+				            	</div>
+				            	<div class="col-md-6">
+				            		<fieldset>			     
+				                    <div class="control-group">
+				                        <label class="control-label" for="suffix">Вечер</label>
+				                        <div text-angular ng-model="timetable.evening" name="demo-editor2" ta-text-editor-class="border-around" ta-html-editor-class="border-around"></div>
+				                    </div>		                   
+				                </fieldset>
+				            	</div>
+				            	<div class="col-md-6">
+				            		<fieldset>			     
+				                    <div class="control-group">
+				                        <label class="control-label" for="suffix">Ночь</label>
+				                        <div text-angular ng-model="timetable.night" name="demo-editor3" ta-text-editor-class="border-around" ta-html-editor-class="border-around"></div>
+				                    </div>		                   
+				                </fieldset>
+				            	</div>
+				                
+				            </div>
+				          </div> 
+				        </div>
+				        <div class="row-fluid">
+				            <div class="control-group">
+				                <div class="controls row-fluid">
+				                    <div class="span12" style="margin: 20px 0px 0px 15px;">
+				                        <button class="btn" data-ng-click="save(timetable)"><i class="icon-remove-sign"></i>Сохранить</button>
+				                        <button class="btn" data-ng-click="returnToList()"><i class="icon-remove-sign"></i>Вернуться к списку</button>
+				                    </div>
+				                </div>				                
+				            </div>
+				        </div>
+				       </form>
+	            </div><!-- /.box-body -->
+            </div><!-- /.box -->
+        </div><!-- /.col -->
+    </div><!-- /.row (main row) -->
+</section>

@@ -1,0 +1,87 @@
+<section class="content" style="margin-bottom: -20px;" ng-cloak>
+    <!-- Main row -->
+    <div class="row">
+        <!-- Left col -->
+    	<div class="col-md-12">
+            <div class="box">                
+                <div class="box-body">					
+					<form name="postForm" class="ng-cloak" >
+        				<div class="row">
+        				<div class="col-md-12">
+				            <div class="col-md-6">
+				                <fieldset>
+				                    <legend>Сотрудник</legend>
+				                     <div class="control-group">
+				                        <label class="control-label" for="title"></label>
+				                        <div class="controls">
+				                            <div class="controls">	
+  												<select ng-model="employee.subvision " ng-options="subvision.name for subvision in subvisions" required>
+  													<option>Выберите подразделение</option>
+  												</select>                            		                            
+				                        	</div>				                            
+				                        </div>
+				                    </div>
+				                    <div class="control-group">
+				                        <label class="control-label" for="title"></label>
+				                        <div class="controls">
+				                            <div class="controls">	
+  												<select ng-model="employee.position" ng-options="position.name for position in positions" required>
+  													<option>Выберите должность</option>
+  												</select>                            		                            
+				                        	</div>				                            
+				                        </div>
+				                    </div>				                   
+				                    <div class="control-group">
+				                        <label class="control-label" for="title">Имя</label>
+				                        <div class="controls">
+				                            <input type="text" name="title" data-ng-model="employee.name" class="span10" style="width: 230px;" required/>  
+				                        </div>				                        
+				                    </div>
+				                    <div class="control-group">
+				                        <label class="control-label" for="firstName">Фамилия</label>
+				                        <div class="controls">
+				                            <input type="text" name="title" data-ng-model="employee.surname" class="span10" style="width: 230px;" required/>          
+				                        </div>
+				                    </div>				                    
+				                    
+				                    <div class="control-group">
+				                        <label class="control-label" for="suffix">Отчество</label>
+				                        <div class="controls">
+				                            <input type="text" name="suffix" data-ng-model="employee.patronymic" class="span10" style="width: 230px;" required/>				                           
+				                        </div>
+				                    </div> 
+				                    <div class="control-group">
+				                        <label class="control-label" for="suffix">Номер</label>
+				                        <div class="controls">
+				                            <input type="text" name="suffix" data-ng-model="employee.number" class="span10" style="width: 230px;" required/>				                           
+				                        </div>
+				                    </div> 
+				                    <div class="control-group">
+				                        <label class="control-label" for="suffix">Email</label>
+				                        <div class="controls">
+				                            <input type="text" name="suffix" data-ng-model="employee.email" class="span10" style="width: 230px;" required/>				                           
+				                        </div>
+				                    </div>    			                    			                    	                   
+				                </fieldset>
+				            </div>				            
+				          </div> 
+				        </div>
+				        <div class="row-fluid">
+				            <div class="control-group">
+				                <div class="controls row-fluid">
+				                    <div class="span12" style="margin: 20px 0px 0px 15px;">
+				                        <button class="btn" type="Submit" data-ng-click="save(employee)">
+				                        	<i class="icon-remove-sign"></i>Сохранить
+				                        </button> 
+				                        				                    </div>
+				                </div>				                
+				            </div>
+				        </div>
+				       </form>
+				       <button class="btn" data-ng-click="returnToList()"><i class="icon-remove-sign"></i>Вернуться к списку</button>
+
+	            </div><!-- /.box-body -->
+            </div><!-- /.box -->
+        </div><!-- /.col -->
+    </div><!-- /.row (main row) -->
+</section>

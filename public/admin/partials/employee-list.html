@@ -1,0 +1,61 @@
+<section class="content ng-cloak" style="margin-bottom: -20px;" ng-cloak>
+    <!-- Main row -->
+    <div class="row" ng-cloak>
+        <!-- Left col -->
+    	<div class="col-md-12" ng-cloak>
+            <div class="box">
+                <div class="box-header with-border" ng-cloak>
+                	<h3 class="box-title" ng-cloak>Сотрудники</h3>
+                </div><!-- /.box-header -->
+                <div class="box-body" ng-cloak>
+					<div align="right" ng-cloak>					
+							<a class="btn btn-success"  ui-sref="admin.employee-edit" ng-cloak>Добавить сотрудника</a>				
+					 </div>
+					<br>
+					<div id="example11_wrapper" class="dataTables_wrapper form-inline dt-bootstrap no-footer" ng-cloak>	                  		
+	                  		<div class="row" ng-cloak>
+	                  			<div class="col-sm-12" ng-cloak>
+	                  				<table id="example11" class="table table-bordered table-striped dataTable no-footer" role="grid" aria-describedby="example11_info" ng-cloak>
+	                    				<thead ng-cloak>
+	                      					<tr role="row">
+	                      						<th class="sorting" tabindex="0" aria-controls="example11" rowspan="1" colspan="1" aria-label="Название: активировать для сортировки столбца по возрастанию" style="width: 218.889px;">
+	                      							<center>Имя</center>
+	                      						</th>
+	                      						<th class="sorting" tabindex="0" aria-controls="example11" rowspan="1" colspan="1" aria-label="Описание: активировать для сортировки столбца по возрастанию" style="width: 133.889px;">
+	                      							<center>Фамилия</center>
+	                      						</th>          							                      						
+	                      						<th style="width: 186px;" class="sorting" tabindex="0" aria-controls="example11" rowspan="1" colspan="1" aria-label="Действие: активировать для сортировки столбца по возрастанию">
+	                      							<center>Действие</center>
+	                      						</th>
+	                      					</tr>
+	                    				</thead>
+	                    				<tbody>
+	                    					<tr role="row" class="odd" ng-repeat="employee in employees">
+	                        					<td>
+	                        						<center ng-bind="employee.name"></center>
+	                        					</td>
+	                        					<td>
+	                        						<center ng-bind="employee.surname"></center>
+	                        					</td>	                        					
+	                        					<td>
+	                        						<center ng-bind="post.created_at"></center>
+	                        					</td>	                        					
+	                        					<td style="width: 10%;">
+	                        						<center>	                        							
+															<a style="width:100%;margin-top:2px;" class="btn btn-primary" ui-sref="admin.employee-detail({'id': employee._id})">Просмотреть</a>	
+															<a style="width:100%;margin-top:2px;" class="btn btn-primary" ui-sref="admin.employee-edit({'id': employee._id})">Редактировать</a>
+															<button style="width:100%;margin-top:2px;" class="btn btn-danger" ng-click="deleteEmployee(employee._id)">Удалить</button>
+													
+										     		</center>
+										     	</td>
+	                      					</tr>
+	                      				</tbody>
+	                  				</table>
+	                  			</div>
+	                  		</div>
+	                  		
+	            </div><!-- /.box-body -->
+            </div><!-- /.box -->
+        </div><!-- /.col -->
+    </div><!-- /.row (main row) -->
+</section>
